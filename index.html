@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر حليم - أجود المنتجات</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+        .header { background: #1a1a1a; color: white; padding: 20px; text-align: center; }
+        .header h1 { margin: 0; font-size: 28px; }
+        .header p { margin: 5px 0 0; color: #4CAF50; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .product { background: white; border-radius: 10px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .product img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+        .product h3 { margin: 10px 0 5px 0; color: #333; }
+        .price { font-size: 24px; color: #E91E63; font-weight: bold; margin: 10px 0; }
+        .old-price { text-decoration: line-through; color: #999; font-size: 16px; }
+        .btn { background: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; margin-top: 10px; }
+        .footer { background: #1a1a1a; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>متجر حليم 🔥</h1>
+        <p>التوصيل فابور فـ كازا | الدفع عند الاستلام</p>
+    </div>
+    <div class="container">
+        <h2 style="text-align: center;">العروض ديال اليوم</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://i.imgur.com/8bGzJ2p.jpg" alt="سماعات M10">
+                <h3>سماعات M10 بلوتوث</h3>
+                <p>صوت نقي، بطارية كتشد 24 ساعة</p>
+                <div class="price">279 درهم <span class="old-price">450 درهم</span></div>
+                <a href="https://wa.me/212716575222?text=سلام،%20بغيت%20نكوموندي%20سماعات%20M10" class="btn">طلب عبر واتساب</a>
+            </div>
+        </div>
+    <div class="footer">
+        <p>للطلب: واتساب 0716755222</p>
+        <p>متجر حليم © 2026</p>
+    </div>
+</body>
+</html>
