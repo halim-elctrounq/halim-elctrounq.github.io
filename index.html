@@ -3,42 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر حليم - أجود المنتجات</title>
+    <title>M10 Pro - سماعات + شارجور طوارئ</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
-        .header { background: #1a1a1a; color: white; padding: 20px; text-align: center; }
-        .header h1 { margin: 0; font-size: 28px; }
-        .header p { margin: 5px 0 0; color: #4CAF50; }
-        .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
-        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .product { background: white; border-radius: 10px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
-        .product img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
-        .product h3 { margin: 10px 0 5px 0; color: #333; }
-        .price { font-size: 24px; color: #E91E63; font-weight: bold; margin: 10px 0; }
-        .old-price { text-decoration: line-through; color: #999; font-size: 16px; }
-        .btn { background: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; margin-top: 10px; }
-        .footer { background: #1a1a1a; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background: #111111; color: #fff; }
+        .top-bar { background: #FF6A00; color: #fff; text-align: center; padding: 8px; font-size: 14px; font-weight: bold; }
+        .header { background: #000; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { color: #FF6A00; font-size: 24px; font-weight: 900; }
+        .logo span { color: #fff; }
+        .container { max-width: 500px; margin: 0 auto; padding: 0 15px; }
+        .product-img { width: 100%; border-radius: 12px; margin: 20px 0; border: 2px solid #FF6A00; }
+        .title { font-size: 28px; font-weight: 900; margin: 15px 0; line-height: 1.3; }
+        .price-box { background: #1A1A1A; padding: 15px; border-radius: 12px; margin: 20px 0; border: 1px solid #333; }
+        .old-price { text-decoration: line-through; color: #888; font-size: 18px; }
+        .new-price { color: #FF6A00; font-size: 32px; font-weight: 900; }
+        .stock { background: #E60000; color: #fff; padding: 8px 12px; border-radius: 20px; font-size: 14px; display: inline-block; margin: 10px 0; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        .features { list-style: none; margin: 25px 0; }
+        .features li { background: #1A1A1A; margin: 10px 0; padding: 12px; border-radius: 8px; border-right: 4px solid #FF6A00; }
+        .features li::before { content: "✅ "; }
+        .cta-button { background: #00C851; color: #fff; width: 100%; padding: 18px; border: none; border-radius: 12px; font-size: 22px; font-weight: 900; margin: 20px 0; cursor: pointer; position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); max-width: 480px; box-shadow: 0 -4px 15px rgba(0,200,81,0.4); z-index: 100; }
+        .form-section { background: #1A1A1A; padding: 20px; border-radius: 12px; margin: 30px 0 100px 0; }
+        .form-section h3 { color: #FF6A00; margin-bottom: 15px; text-align: center; }
+        input { width: 100%; padding: 15px; margin: 10px 0; border: 2px solid #333; background: #111; color: #fff; border-radius: 8px; font-size: 16px; }
+        input:focus { border-color: #FF6A00; outline: none; }
+        .submit-btn { background: #FF6A00; color: #fff; width: 100%; padding: 15px; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; margin-top: 10px; }
+        .guarantee { text-align: center; margin: 20px 0; font-size: 14px; color: #888; }
     </style>
 </head>
 <body>
+    <div class="top-bar">🔥 Des offres à ne pas manquer ! التوصيل فابور لرباط وسلا</div>
+    
     <div class="header">
-        <h1>متجر حليم 🔥</h1>
-        <p>التوصيل فابور فـ كازا | الدفع عند الاستلام</p>
+        <div class="logo">M10<span>PRO</span></div>
+        <div>🛒</div>
     </div>
+
     <div class="container">
-        <h2 style="text-align: center;">العروض ديال اليوم</h2>
-        <div class="products">
-            <div class="product">
-                <img src="https://i.postimg.cc/RhCP7nrT/309e68e7-1137-4bb9-b72c-321e5e08980b.jpg" alt="سماعات M10" style="width:100%; border-radius:12px; margin-bottom:15px;">
-                <h3>سماعات M10 بلوتوث</h3>
-                <p>صوت نقي، بطارية كتشد 24 ساعة</p>
-                <div class="price">200 درهم <span class="old-price">249 درهم</span></div>
-                <a href="https://wa.me/212716575222?text=سلام،%20بغيت%20نكوموندي%20سماعات%20M10" class="btn">طلب عبر واتساب</a>
-             </div>
+        <img src="https://i.ibb.co/6n0hL5z/m10-pro-main.jpg" alt="M10 Pro" class="product-img">
+        
+        <h1 class="title">M10 Pro - سماعات + باور بانك طوارئ</h1>
+        
+        <div class="stock">⏳ باقي 9 بياسات فـ الستوك فقط</div>
+
+        <div class="price-box">
+            <div class="old-price">الثمن القديم: 299 درهم</div>
+            <div class="new-price">الثمن دابا: 199 درهم فقط</div>
+            <div style="color: #00C851; margin-top: 5px;">التوصيل فابور + الدفع عند الاستلام</div>
         </div>
-    <div class="footer">
-        <p>للطلب: واتساب 0716575222</p>
-        <p>متجر حليم © 2026</p>
+
+        <ul class="features">
+            <li>باور بانك مدمج - شارجي تيليفونك فـ الطريق</li>
+            <li>بطارية تدوم 6 ساعات ديال الموسيقى</li>
+            <li>مقاومة للماء والعرق IPX7</li>
+            <li>صوت نقي Bass قوي</li>
+            <li>ضمان 3 أشهر ضد عيوب التصنيع</li>
+        </ul>
+
+        <div class="form-section" id="order-form">
+            <h3>📦 أطلب دابا يوصلك غدا</h3>
+            <form action="https://formspree.io/f/xgvnwbgo" method="POST">
+                <input type="text" name="name" placeholder="الاسم الكامل" required>
+                <input type="tel" name="phone" placeholder="رقم الواتساب" required>
+                <input type="text" name="address" placeholder="العنوان الكامل: المدينة + الحي" required>
+                <input type="hidden" name="product" value="M10 Pro - 199dh">
+                <button type="submit" class="submit-btn">أكد الطلب ديالي ✅</button>
+            </form>
+            <div class="guarantee">🔒 معلوماتك آمنة 100%. ما كانصيفطوش سبام</div>
+        </div>
     </div>
+
+    <button class="cta-button" onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'})">
+        🛒 اطلب الآن - 199 درهم
+    </button>
+
 </body>
 </html>
