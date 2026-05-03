@@ -3,24 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حليم إلكترونك - M10 Pro</title>
+    <title>حليم إلكترونك - عرض خاص</title>
     <style>
-        body { font-family: Arial; background: #000; color: #fff; text-align: center; margin:0; padding:20px }
-        .container { max-width: 600px; margin: auto; background: #111; padding:20px; border-radius:10px }
-        img { width:100%; max-width:300px; border-radius:10px }
-        h1 { color: #25D366 }
-        .price { font-size: 28px; color: #00ff00; margin:20px 0 }
-        .btn { display:block; background: #25D366; color:#fff; padding:15px; text-decoration:none; border-radius:8px; font-size:18px; margin:10px 0 }
+        * { margin:0; padding:0; box-sizing:border-box }
+        body { font-family: Arial; background:#f5f5f5; color:#333 }
+        .header { background:#FF4747; color:#fff; text-align:center; padding:10px; font-weight:bold }
+        .container { max-width:500px; margin:auto; background:#fff }
+        .product-img { position:relative }
+        .product-img img { width:100%; display:block }
+        .badge { 
+            position:absolute; top:10px; right:10px; background:#FF4747; color:#fff; 
+            padding:8px 12px; border-radius:50px; font-weight:bold; font-size:14px
+        }
+        .info { padding:20px }
+        .title { font-size:22px; font-weight:bold; margin-bottom:10px }
+        .rating { color:#FFB400; margin-bottom:15px }
+        .price-box { background:#FFF5F5; padding:15px; border-radius:10px; margin:15px 0 }
+        .old-price { color:#999; text-decoration:line-through; font-size:18px }
+        .new-price { color:#FF4747; font-size:32px; font-weight:bold }
+        .discount { background:#FF4747; color:#fff; padding:3px 8px; border-radius:5px; font-size:14px }
+        .timer { background:#333; color:#FFD700; padding:10px; border-radius:8px; text-align:center; margin:15px 0 }
+        .features { margin:20px 0 }
+        .features li { margin:8px 0; list-style:none }
+        .features li::before { content:"✓ "; color:#25D366; font-weight:bold }
+        .btn { 
+            display:block; background:#25D366; color:#fff; text-align:center; 
+            padding:18px; text-decoration:none; border-radius:10px; font-size:20px; 
+            font-weight:bold; margin:20px 0; box-shadow:0 4px 10px rgba(37,211,102,0.3)
+        }
+        .guarantee { text-align:center; font-size:14px; color:#666; margin-top:15px }
     </style>
 </head>
 <body>
+    <div class="header">🔥 عرض محدود - الكمية قليلة 🔥</div>
+    
     <div class="container">
-        <h1>حليم إلكترونك</h1>
-        <h2>سماعة M10 Pro الأصلية</h2>
-        <img src="m10.jpg" alt="M10 Pro">
-        <p>أفضل سماعة بلوتوث 5.3 - باس قوي - بطارية 8 سوايع</p>
-        <div class="price">149 درهم فقط</div>
-        <a class="btn" href="https://wa.me/212709465060?text=سلام، بغيت نكوموندي M10 Pro">كوموندي عبر واتساب</a>
+        <div class="product-img">
+            <img src="m10.jpg" alt="AirPods Pro">
+            <div class="badge">خصم 20%</div>
+        </div>
+        
+        <div class="info">
+            <div class="title">سماعة AirPods Pro Copy 1:1 - الجيل الثاني</div>
+            <div class="rating">★★★★★ 4.9 | تباع +1200 قطعة</div>
+            
+            <div class="price-box">
+                <span class="old-price">249 درهم</span>
+                <span class="discount">وفر 50 درهم</span><br>
+                <span class="new-price">199 درهم</span>
+            </div>
+
+            <div class="timer" id="timer">⏰ العرض يسالي خلال: 05:59:32</div>
+            
+            <ul class="features">
+                <li>جودة صوت عالية + إلغاء الضوضاء</li>
+                <li>بطارية تدوم 6 ساعات + علبة الشحن</li>
+                <li>متوافقة مع Android و iPhone</li>
+                <li>ضمان 3 أشهر + التوصيل فابور</li>
+            </ul>
+
+            <a class="btn" href="https://wa.me/212709465060?text=سلام، بغيت نستافد من عرض AirPods بـ 199 درهم">
+                📱 كوموندي دابا عبر واتساب
+            </a>
+            
+            <div class="guarantee">✅ الدفع عند الاستلام | 🚚 توصيل لجميع المدن</div>
+        </div>
     </div>
+
+    <script>
+        // عداد وهمي كيزيد الحماس
+        let time = 5 * 3600 + 59 * 60 + 32;
+        setInterval(() => {
+            time--;
+            let h = Math.floor(time/3600);
+            let m = Math.floor((time%3600)/60);
+            let s = time%60;
+            document.getElementById('timer').innerHTML = `⏰ العرض يسالي خلال: ${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+            if(time <= 0) time = 5 * 3600 + 59 * 60 + 32; // كيتعاود
+        }, 1000);
+    </script>
 </body>
 </html>
